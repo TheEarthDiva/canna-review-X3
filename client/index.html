@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dispensary Review Form</title>
+
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<div class="container">
+<div class="rendered-form">
+    <h1>Dispensary Review Prompt Form</h1>
+    <form>
+    <div class="mb-3">
+        <label for="storeName" class="formbuilder-text-label">Enter the name of the store</label>
+        <input type="text" class="form-control storeName" name="storeName" access="false" id="text-16725430185">
+    </div>
+    <div class="formbuilder-text form-group field-text-1672543018551 mb-3">
+        <label for="storeName" class="formbuilder-text-label">What city?</label>
+        <input type="text" class="form-control storeCity" name="storeCity" access="false" id="text-16725430185">
+    </div>
+    <div class="mb-3 formbuilder-date form-group field-date-1672859307984">
+        <label for="date-1672859307984" class="formbuilder-date-label">Date</label>
+        <input type="date" class="visitDate" name="visitDate" access="false" id="visitDate">
+    </div>
+    <div class="mb-3 formbuilder-select form-group field-select-1672542600684">
+        <label for="select-1672542600684" class="formbuilder-select-label">How easy was the parking area to find?</label>
+        <select class="DifLvlToFind" name="difLvlToFind" id="select-1672542600684">
+            <option disabled="null" selected="null">Select...</option>
+            <option value="veryEasy" id="select-1672542600684-0">Very Easy</option>
+            <option value="SomewhatEasy" id="select-1672542600684-1">Somewhat Easy</option>
+            <option value="somewhatDifficult" id="select-1672542600684-2">Somewhat Difficult</option>
+            <option value="veryDifficult" id="select-1672542600684-3">Very Difficult</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-select form-group field-select-1672542880768">
+        <label for="select-1672542880768" class="formbuilder-select-label">How easy was the parking area to use?</label>
+        <select class="DifLvlToUse" name="difLvlToUse" id="select-1672542880768">
+            <option disabled="null" selected="null">Select...</option>
+            <option value="veryEasy" id="select-1672542880768-0">Very Easy</option>
+            <option value="SomewhatEasy" id="select-1672542880768-1">Somewhat Easy</option>
+            <option value="somewhatDifficult" id="select-1672542880768-2">Somewhat Difficult</option>
+            <option value="veryDifficult" id="select-1672542880768-3">Very Difficult</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-text form-group field-text-1672542930692">
+        <label for="text-1672542930692" class="formbuilder-text-label">How many disabled parking spaces were there?</label>
+        <input type="text" class="disabledSpaces" name="disabledSpaces" access="false" id="text-1672542930692">
+    </div>
+    <div class="mb-3 formbuilder-text form-group field-text-1672543018551">
+        <label for="text-1672543018551" class="formbuilder-text-label">What else would you like to say about the parking?</label>
+        <input type="text" class="form-control parkingKeywords" name="parkingKeywords" access="false" id="text-1672543018551">
+    </div>
+
+<!-- Lobby Section-->
+    <div class="mb-3 formbuilder-checkbox-group form-group field-lobbyAesthetic">
+        <label for="lobbyAesthetic" class="formbuilder-checkbox-group-label"><span>How would you describe the decor/aesthetic?</span></label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-0" value="messy" type="checkbox">
+                <label for="lobbyAesthetic-0">Messy</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-1" value="classy" type="checkbox">
+                <label for="lobbyAesthetic-1">Classy</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-2" value="modern" type="checkbox">
+                <label for="lobbyAesthetic-2">Modern</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-3" value="organic" type="checkbox">
+                <label for="lobbyAesthetic-3">Organic</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-4" value="bachelor" type="checkbox">
+                <label for="lobbyAesthetic-4">Bachelor Pad</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-5" value="grunge" type="checkbox">
+                <label for="lobbyAesthetic-5">Grunge</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-6" value="retro" type="checkbox">
+                <label for="lobbyAesthetic-6">Retro</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-7" value="victorian" type="checkbox">
+                <label for="lobbyAesthetic-7">Victorian</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyAesthetic" name="lobbyAesthetic[]" access="false" id="lobbyAesthetic-8" value="eclectic" type="checkbox">
+                <label for="lobbyAesthetic-8">Eclectic</label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-select form-group field-lobbySize">
+        <label for="lobbySize" class="formbuilder-select-label">How big was the lobby?</label>
+        <select class="lobbySize" name="lobbySize" id="lobbySize">
+            <option disabled="null" selected="null">Select...</option>
+            <option value="too-small" id="lobbySize-0">Too small</option>
+            <option value="somewhat-sm" id="lobbySize-1">somewhat small</option>
+            <option value="neither" id="lobbySize-2">neither too small or too large</option>
+            <option value="ample" id="lobbySize-3">ample sized</option>
+            <option value="oversized" id="lobbySize-4">Oversized</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-radio-group form-group field-lobbySpeed">
+        <label for="lobbySpeed" class="formbuilder-radio-group-label">The speed of check-in was...</label>
+        <div class="radio-group">
+            <div class="form-check-inline">
+                <input class="lobbySpeed" name="lobbySpeed" access="false" id="lobbySpeed-0" value="quick" type="radio">
+                <label for="lobbySpeed-0">Very quick</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbySpeed" name="lobbySpeed" access="false" id="lobbySpeed-1" value="slow" type="radio">
+                <label for="lobbySpeed-1">Too slow</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbySpeed other-option" name="lobbySpeed" access="false" id="lobbySpeed-other" value="" type="radio">
+                <label for="lobbySpeed-other">Other
+                    <input type="text" id="lobbySpeed-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-text form-group field-lobbyAtmos">
+        <label for="lobbyAtmos" class="formbuilder-text-label">How would you describe the atmosphere? How did it make you feel?</label>
+        <input type="text" class="lobbyAtmos" name="lobbyAtmos" access="false" id="lobbyAtmos">
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-lobbyLighting">
+        <label for="lobbyLighting" class="formbuilder-checkbox-group-label">How would you describe the lighting?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input class="lobbyLighting" name="lobbyLighting[]" access="false" id="lobbyLighting-0" value="warm" type="checkbox">
+                <label for="lobbyLighting-0">Warm</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyLighting" name="lobbyLighting[]" access="false" id="lobbyLighting-1" value="cold" type="checkbox">
+                <label for="lobbyLighting-1">Cold</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyLighting" name="lobbyLighting[]" access="false" id="lobbyLighting-2" value="ample" type="checkbox">
+                <label for="lobbyLighting-2">Ample</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyLighting" name="lobbyLighting[]" access="false" id="lobbyLighting-3" value="understated" type="checkbox">
+                <label for="lobbyLighting-3">Understated</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyLighting" name="lobbyLighting[]" access="false" id="lobbyLighting-4" value="intense" type="checkbox">
+                <label for="lobbyLighting-4">Intense</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyLighting other-option" name="lobbyLighting[]" access="false" id="lobbyLighting-other" value="" type="checkbox">
+                <label for="lobbyLighting-other">Other
+                    <input type="text" id="lobbyLighting-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-lobbyDisplays">
+        <label for="lobbyDisplays" class="formbuilder-checkbox-group-label">How were the display cases?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input class="lobbyDisplays" name="lobbyDisplays[]" access="false" id="lobbyDisplays-0" value="organized" type="checkbox">
+                <label for="lobbyDisplays-0">Organized</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyDisplays" name="lobbyDisplays[]" access="false" id="lobbyDisplays-1" value="disorganized" type="checkbox">
+                <label for="lobbyDisplays-1">Disorganized</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyDisplays" name="lobbyDisplays[]" access="false" id="lobbyDisplays-2" value="sparse" type="checkbox">
+                <label for="lobbyDisplays-2">Sparse</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyDisplays" name="lobbyDisplays[]" access="false" id="lobbyDisplays-3" value="cluttered" type="checkbox">
+                <label for="lobbyDisplays-3">Cluttered</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyDisplays" name="lobbyDisplays[]" access="false" id="lobbyDisplays-4" value="Clean" type="checkbox">
+                <label for="lobbyDisplays-4">Clean</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="lobbyDisplays other-option" name="lobbyDisplays[]" access="false" id="lobbyDisplays-other" value="" type="checkbox">
+                <label for="lobbyDisplays-other">Other
+                    <input type="text" id="lobbyDisplays-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-textarea form-group field-lobbyKeywords">
+        <label for="lobbyKeywords" class="formbuilder-textarea-label">What else would you like to add about the store or checking in?</label>
+        <textarea type="textarea" class="form-control lobbyKeywords" name="lobbyKeywords" access="false" id="lobbyKeywords"></textarea>
+    </div>
+
+<!-- Budtender Section-->
+    <div class="mb-3 formbuilder-textarea form-group field-btDesc">
+        <label for="btDesc" class="formbuilder-textarea-label">Please describe the bud tender.</label>
+        <textarea type="textarea" class="form-control btDesc" name="btDesc" access="false" id="btDesc"></textarea>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-btComfort">
+        <label for="btComfort" class="formbuilder-checkbox-group-label">How comfortable did you feel asking the bud tender questions?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input class="btComfort" name="btComfort[]" access="false" id="btComfort-0" value="anxious" type="checkbox">
+                <label for="btComfort-0">anxious</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="btComfort" name="btComfort[]" access="false" id="btComfort-1" value="awkward" type="checkbox">
+                <label for="btComfort-1">awkward</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="btComfort" name="btComfort[]" access="false" id="btComfort-2" value="somewhat" type="checkbox">
+                <label for="btComfort-2">somewhat comfortable</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="btComfort" name="btComfort[]" access="false" id="btComfort-3" value="very-comfortable" type="checkbox">
+                <label for="btComfort-3">very comfortable</label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-btKnowledge">
+        <label for="btKnowledge" class="formbuilder-checkbox-group-label">How knowledgeable was the bud tender about cannabis?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input name="btKnowledge[]" access="false" id="btKnowledge-0" type="checkbox">
+                <label for="btKnowledge-0">very uninformed</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="btKnowledge[]" access="false" id="btKnowledge-1" type="checkbox">
+                <label for="btKnowledge-1">somewhat informed</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="btKnowledge[]" access="false" id="btKnowledge-2" type="checkbox">
+                <label for="btKnowledge-2">very knowledgeable</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="btKnowledge[]" access="false" id="btKnowledge-other" class="undefined other-option" value="" type="checkbox">
+                <label for="btKnowledge-other">Other
+                    <input type="text" id="btKnowledge-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-radio-group form-group field-btQuestion">
+        <label for="btQuestion" class="formbuilder-radio-group-label">What did the budtender do if they didn't know the answer to a question?</label>
+        <div class="radio-group">
+            <div class="formbuilder-radio">
+                <input name="btQuestion" access="false" id="btQuestion-0" type="radio">
+                <label for="btQuestion-0">There wasn't anything they didn't know</label>
+            </div>
+            <div class="formbuilder-radio">
+                <input name="btQuestion" access="false" id="btQuestion-1" type="radio">
+                <label for="btQuestion-1">They bullshitted an answer</label>
+            </div>
+            <div class="formbuilder-radio">
+                <input name="btQuestion" access="false" id="btQuestion-2" type="radio">
+                <label for="btQuestion-2">They admitted they didn't know and searched out an answer</label>
+            </div>
+            <div class="formbuilder-radio">
+                <input name="btQuestion" access="false" id="btQuestion-3" type="radio">
+                <label for="btQuestion-3">They admitted they didn't know but didn't look for the answer</label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-textarea form-group field-btKeywords">
+        <label for="btKeywords" class="formbuilder-textarea-label">What else would you like to say about the bud tender?</label>
+        <textarea type="textarea" class="form-control btKeywords" name="btKeywords" access="false" id="btKeywords"></textarea>
+    </div>
+
+<!-- Checkout Section -->
+    <div class="mb-3 formbuilder-textarea form-group field-cOpkgDesc">
+        <label for="cOpkgDesc" class="formbuilder-textarea-label">Describe the packaging.</label>
+        <textarea type="textarea" class="form-control cOpkgDesc" name="cOpkgDesc" access="false" id="cOpkgDesc"></textarea>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-coPmt">
+        <label for="coPmt" class="formbuilder-checkbox-group-label">What forms of payment did they accept?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input class="coPmt" name="coPmt[]" access="false" id="coPmt-0" value="cash" type="checkbox">
+                <label for="coPmt-0">cash</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="coPmt" name="coPmt[]" access="false" id="coPmt-1" value="check" type="checkbox">
+                <label for="coPmt-1">check</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="coPmt" name="coPmt[]" access="false" id="coPmt-2" value="debit" type="checkbox">
+                <label for="coPmt-2">debit</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="coPmt" name="coPmt[]" access="false" id="coPmt-3" value="credit" type="checkbox">
+                <label for="coPmt-3">credit</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="coPmt" name="coPmt[]" access="false" id="coPmt-4" value="tap" type="checkbox">
+                <label for="coPmt-4">Tap &amp; Pay</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="coPmt other-option" name="coPmt[]" access="false" id="coPmt-other" value="" type="checkbox">
+                <label for="coPmt-other">Other
+                    <input type="text" id="coPmt-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-textarea form-group field-coKeywords">
+        <label for="coKeywords" class="formbuilder-textarea-label">What else would you like to say about the checkout?</label>
+        <textarea type="textarea" class="form-control" name="coKeywords" access="false" id="coKeywords"></textarea>
+    </div>
+
+<!-- Unboxing Section-->
+    <div class="mb-3 formbuilder-select form-group field-unboxDiff">
+        <label for="unboxDiff" class="formbuilder-select-label">How difficult would the package be to open for someone with arthritis?</label>
+        <select class="form-control" name="unboxDiff" id="unboxDiff">
+            <option disabled="null" selected="null">Select...</option>
+            <option id="unboxDiff-0">Very difficult</option>
+            <option id="unboxDiff-1">Relatively easy</option>
+            <option id="unboxDiff-2">Very easy</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-text form-group field-strain">
+        <label for="strain" class="formbuilder-text-label">What's the name of the strain?</label>
+        <input type="text" class="form-control" name="strain" access="false" id="strain">
+    </div>
+    <div class="mb-3 formbuilder-number field-unboxRateClr">
+        <label for="unboxRateClr" class="formbuilder-number-label">On a scale from 1 to 5, how would you rate the color?</label>
+        <input type="number" name="unboxRateClr" access="false" min="1" max="5" id="unboxRateClr">
+    </div>
+    <div class="mb-3 formbuilder-textarea form-group field-unboxAppeal">
+        <label for="unboxAppeal" class="formbuilder-textarea-label">Describe what the bud looked like and if it was appealing.</label>
+        <textarea type="textarea" class="form-control" name="unboxAppeal" access="false" id="unboxAppeal"></textarea>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-unboxColors">
+        <label for="unboxColors" class="formbuilder-checkbox-group-label">What colors were present on the bud?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-0" type="checkbox">
+                <label for="unboxColors-0">Dark green</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-1" type="checkbox">
+                <label for="unboxColors-1">Light green</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-2" type="checkbox">
+                <label for="unboxColors-2">Amber</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-3" type="checkbox">
+                <label for="unboxColors-3">Orange</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-4" type="checkbox">
+                <label for="unboxColors-4">White</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-5" type="checkbox">
+                <label for="unboxColors-5">Purple</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxColors[]" access="false" id="unboxColors-other" class="undefined other-option" value="" type="checkbox">
+                <label for="unboxColors-other">Other
+                    <input type="text" id="unboxColors-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-select form-group field-unboxOdorInt">
+        <label for="unboxOdorInt" class="formbuilder-select-label">Select one of the following about the intensity of the odor.</label>
+        <select class="form-control" name="unboxOdorInt" id="unboxOdorInt">
+            <option disabled="null" selected="null">Select...</option>
+            <option id="unboxOdorInt-0">Very weak</option>
+            <option id="unboxOdorInt-1">Subtle</option>
+            <option id="unboxOdorInt-2">Strong</option>
+            <option id="unboxOdorInt-3">Overpowering</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-unboxOdorNotes">
+        <label for="unboxOdorNotes" class="formbuilder-checkbox-group-label">What notes did you detect on first impression?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-0" type="checkbox">
+                <label for="unboxOdorNotes-0">Earthy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-1" type="checkbox">
+                <label for="unboxOdorNotes-1">Herbal</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-2" type="checkbox">
+                <label for="unboxOdorNotes-2">Lemon</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-3" type="checkbox">
+                <label for="unboxOdorNotes-3">Orange</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-4" type="checkbox">
+                <label for="unboxOdorNotes-4">Spicy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-5" type="checkbox">
+                <label for="unboxOdorNotes-5">Woody</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-6" type="checkbox">
+                <label for="unboxOdorNotes-6">Floral</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-7" type="checkbox">
+                <label for="unboxOdorNotes-7">Pine</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-8" type="checkbox">
+                <label for="unboxOdorNotes-8">Grape</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-9" type="checkbox">
+                <label for="unboxOdorNotes-9">Tropical</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-10" type="checkbox">
+                <label for="unboxOdorNotes-10">Berry</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-11" type="checkbox">
+                <label for="unboxOdorNotes-11">Diesel</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-12" type="checkbox">
+                <label for="unboxOdorNotes-12">Skunkiness</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-13" type="checkbox">
+                <label for="unboxOdorNotes-13">Mint</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="unboxOdorNotes[]" access="false" id="unboxOdorNotes-other" class="undefined other-option" value="" type="checkbox">
+                <label for="unboxOdorNotes-other">Other
+                    <input type="text" id="unboxOdorNotes-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    <div class="mb-3 formbuilder-textarea form-group field-unboxKeywords">
+        <label for="unboxKeywords" class="formbuilder-textarea-label">What else would you like to say about unboxing?</label>
+        <textarea type="textarea" class="form-control" name="unboxKeywords" access="false" id="unboxKeywords"></textarea>
+    </div>
+
+<!-- Preparation Section -->
+    <div class="mb-3 formbuilder-checkbox-group form-group field-prepOdorNotes">
+        <label for="prepOdorNotes" class="formbuilder-checkbox-group-label">What notes did you detect when grinding?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-0" type="checkbox">
+                <label for="prepOdorNotes-0">Earthy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-1" type="checkbox">
+                <label for="prepOdorNotes-1">Herbal</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-2" type="checkbox">
+                <label for="prepOdorNotes-2">Lemon</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-3" type="checkbox">
+                <label for="prepOdorNotes-3">Orange</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-4" type="checkbox">
+                <label for="prepOdorNotes-4">Spicy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-5" type="checkbox">
+                <label for="prepOdorNotes-5">Woody</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-6" type="checkbox">
+                <label for="prepOdorNotes-6">Floral</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-7" type="checkbox">
+                <label for="prepOdorNotes-7">Pine</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-8" type="checkbox">
+                <label for="prepOdorNotes-8">Grape</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-9" type="checkbox">
+                <label for="prepOdorNotes-9">Tropical</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-10" type="checkbox">
+                <label for="prepOdorNotes-10">Berry</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-11" type="checkbox">
+                <label for="prepOdorNotes-11">Diesel</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-12" type="checkbox">
+                <label for="prepOdorNotes-12">Skunkiness</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-13" type="checkbox">
+                <label for="prepOdorNotes-13">Mint</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepOdorNotes[]" access="false" id="prepOdorNotes-other" class="undefined other-option" value="" type="checkbox">
+                <label for="prepOdorNotes-other">Other
+                    <input type="text" id="prepOdorNotes-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-select form-group field-prepMoisture">
+        <label for="prepMoisture" class="formbuilder-select-label">Finish this sentence: The moisture content was:</label>
+        <select class="form-control" name="prepMoisture" id="prepMoisture">
+            <option disabled="null" selected="null">Select...</option>
+            <option id="prepMoisture-0">Too dry and crumbly</option>
+            <option id="prepMoisture-1">Perfect</option>
+            <option id="prepMoisture-2">Too moist</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-prepTasteNotes">
+        <label for="prepTasteNotes" class="formbuilder-checkbox-group-label">What notes did you detect when you took a dry hit?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-0" type="checkbox">
+                <label for="prepTasteNotes-0">Earthy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-1" type="checkbox">
+                <label for="prepTasteNotes-1">Herbal</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-2" type="checkbox">
+                <label for="prepTasteNotes-2">Lemon</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-3" type="checkbox">
+                <label for="prepTasteNotes-3">Orange</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-4" type="checkbox">
+                <label for="prepTasteNotes-4">Spicy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-5" type="checkbox">
+                <label for="prepTasteNotes-5">Woody</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-6" type="checkbox">
+                <label for="prepTasteNotes-6">Floral</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-7" type="checkbox">
+                <label for="prepTasteNotes-7">Pine</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-8" type="checkbox">
+                <label for="prepTasteNotes-8">Grape</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-9" type="checkbox">
+                <label for="prepTasteNotes-9">Tropical</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-10" type="checkbox">
+                <label for="prepTasteNotes-10">Berry</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-11" type="checkbox">
+                <label for="prepTasteNotes-11">Diesel</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-12" type="checkbox">
+                <label for="prepTasteNotes-12">Skunkiness</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-13" type="checkbox">
+                <label for="prepTasteNotes-13">Mint</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="prepTasteNotes[]" access="false" id="prepTasteNotes-other" class="undefined other-option" value="" type="checkbox">
+                <label for="prepTasteNotes-other">Other
+                    <input type="text" id="prepTasteNotes-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-textarea form-group field-prepKeywords">
+        <label for="prepKeywords" class="formbuilder-textarea-label">What else would you like to say about preparing the bud?</label>
+        <textarea type="textarea" class="form-control" name="prepKeywords" access="false" id="prepKeywords"></textarea>
+    </div>
+
+<!-- Final Use Section -->
+    <div class="mb-3 formbuilder-number form-group field-finalTasteRate">
+        <label for="finalTasteRate" class="formbuilder-number-label">After you lit the joint: on a scale of 1 to 5, how would you rate the overall taste</label>
+        <input type="number" name="finalTasteRate" access="false" min="1" max="5" id="finalTasteRate">
+    </div>
+    <div class="mb-3 formbuilder-checkbox-group form-group field-finalTasteNotes">
+        <label for="finalTasteNotes" class="formbuilder-checkbox-group-label">What notes did you detect when smoking?</label>
+        <div class="checkbox-group">
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-0" type="checkbox">
+                <label for="finalTasteNotes-0">Earthy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-1" type="checkbox">
+                <label for="finalTasteNotes-1">Herbal</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-2" type="checkbox">
+                <label for="finalTasteNotes-2">Lemon</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-3" type="checkbox">
+                <label for="finalTasteNotes-3">Orange</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-4" type="checkbox">
+                <label for="finalTasteNotes-4">Spicy</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-5" type="checkbox">
+                <label for="finalTasteNotes-5">Woody</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-6" type="checkbox">
+                <label for="finalTasteNotes-6">Floral</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-7" type="checkbox">
+                <label for="finalTasteNotes-7">Pine</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-8" type="checkbox">
+                <label for="finalTasteNotes-8">Grape</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-9" type="checkbox">
+                <label for="finalTasteNotes-9">Tropical</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-10" type="checkbox">
+                <label for="finalTasteNotes-10">Berry</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-11" type="checkbox">
+                <label for="finalTasteNotes-11">Diesel</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-12" type="checkbox">
+                <label for="finalTasteNotes-12">Skunkiness</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-13" type="checkbox">
+                <label for="finalTasteNotes-13">Mint</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalTasteNotes[]" access="false" id="finalTasteNotes-other" class="undefined other-option" value="" type="checkbox">
+                <label for="finalTasteNotes-other">Other
+                    <input type="text" id="finalTasteNotes-other-value" class="other-val">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-radio-group form-group field-finalEven">
+        <label for="finalEven" class="formbuilder-radio-group-label">Did the joint burn evenly?</label>
+        <div class="radio-group">
+            <div class="form-check-inline">
+                <input name="finalEven" access="false" id="finalEven-0" type="radio">
+                <label for="finalEven-0">evenly</label>
+            </div>
+            <div class="form-check-inline">
+                <input name="finalEven" access="false" id="finalEven-1" type="radio">
+                <label for="finalEven-1">not evenly</label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 formbuilder-select form-group field-finalAshClr">
+        <label for="finalAshClr" class="formbuilder-select-label">What color was the ash?</label>
+        <select class="form-control" name="finalAshClr" id="finalAshClr">
+            <option disabled="null" selected="null">Select...</option>
+            <option id="finalAshClr-0">Clean and white</option>
+            <option id="finalAshClr-1">Grey</option>
+            <option id="finalAshClr-2">Black</option>
+        </select>
+    </div>
+    <div class="mb-3 formbuilder-text form-group field-finalMed">
+        <label for="finalMed" class="formbuilder-text-label">How did the weed make you feel? Particularly medicinally.</label>
+        <input type="text" class="form-control" name="finalMed" access="false" id="finalMed">
+    </div>
+    <div class="mb-3 formbuilder-textarea form-group field-finalKeywords">
+        <label for="finalKeywords" class="formbuilder-textarea-label">What else would you like to say about the experience?</label>
+        <textarea type="textarea" class="form-control" name="finalKeywords" access="false" id="finalKeywords"></textarea>
+    </div>
+
+<!-- Submit and Chat function -->
+    <div><br></div>
+    <div class="formbuilder-button form-group field-button-1672543556095">
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+    </div>
+    </form>
+    <div><br></div>
+    <div id="chat_container"></div>
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+</div>
+
+
+<script type="module" src="/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+label {
+    line-height: 2.5;
+}
+
+#chat_container {
+    border: 2px solid forestgreen;
+    border-radius: 5px;
+    background-color: honeydew;
+}
+
+.formbuilder-checkbox-inline {
+    display: flex;
+}
