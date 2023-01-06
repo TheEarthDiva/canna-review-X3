@@ -7,15 +7,15 @@ const chatContainer = document.querySelector('#chat_container')
 let loadInterval
 
 function loader(element) {
-    element.textContent = ''
+    element.textContent = 'Please wait'
 
     loadInterval = setInterval(() => {
         // Update the text content of the loading indicator
         element.textContent += '.';
 
         // If the loading indicator has reached three dots, reset it
-        if (element.textContent === '....') {
-            element.textContent = '';
+        if (element.textContent === 'Please wait....') {
+            element.textContent = 'Please wait';
         }
     }, 300);
 }
@@ -142,7 +142,12 @@ const handleSubmit = async (e) => {
         const data = await response.json();
         const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
-        typeText(messageDiv, parsedData)
+        const parsedDataString = JSON.stringify(parsedData)  // convert parsedData to a string
+        const updatedParsedDataString = parsedDataString.replace(/\\n/g, "<br />")  // replace \n with <br />
+
+        const updatedParsedData = JSON.parse(updatedParsedDataString)  // convert updatedParsedDataString back to an object
+
+        typeText(messageDiv, updatedParsedData)
     } else {
         const err = await response.text()
 
@@ -152,8 +157,3 @@ const handleSubmit = async (e) => {
 }
 
 form.addEventListener('submit', handleSubmit)
-form.addEventListener('keyup', (e) => {
-    if (e.keyCode === 13) {
-        handleSubmit(e)
-    }
-})
