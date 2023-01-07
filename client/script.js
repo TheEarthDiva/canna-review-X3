@@ -72,7 +72,7 @@ const handleSubmit = async (e) => {
     chatContainer.innerHTML += chatStripe(false, data.get('storeName','storeCity','visitDate','difLvlToFind','difLvlToUse','disabledSpaces','parkingKeywords','lobbyAesthetic','lobbySize','lobbySpeed','lobbyAtmos','lobbyLighting','lobbyDisplays','lobbyKeywords','btDesc','btComfort','btKnowledge','btQuestion','btKeywords','cOpkgDesc','coPmt','coKeywords','unboxDiff','unboxRateClr','unboxAppeal','unboxColors','unboxOdorInt','unboxOdorNotes','unboxKeywords','prepOdorNotes','prepMoisture','prepTasteNotes','prepKeywords','finalTasteRate','finalTasteNotes','finalEven','finalAshClr','finalMed','finalKeywords'))
 
     // to clear the textarea input 
-    form.reset()
+ //   form.reset()
 
     // bot's chatstripe
     const uniqueId = generateUniqueId()
@@ -87,6 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
+    //https://cannai-review.onrender.com      http://localhost:3000
     const response = await fetch('https://cannai-review.onrender.com', {
         method: 'POST',
         headers: {
