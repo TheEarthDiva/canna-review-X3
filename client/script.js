@@ -25,7 +25,8 @@ function typeText(element, text) {
 
     let interval = setInterval(() => {
         if (index < text.length) {
-            element.innerHTML += text.charAt(index)
+            element.innerHTML = text;  //This is the line I added to make the page breaks work!!
+//            element.innerHTML += text.charAt(index)  I can't currently both these methods together. 
             index++
         } else {
             clearInterval(interval)
