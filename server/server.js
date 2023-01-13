@@ -2,6 +2,7 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
+import nodemailer from 'nodemailer'
 
 dotenv.config()
 
@@ -66,13 +67,40 @@ app.post('/', async (req, res) => {
     const finalMed = req.body.finalMed;
     const finalKeywords = req.body.finalKeywords;
 
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: process.env.MAIL_USERNAME,
+        pass: process.env.MAIL_PASSWORD,
+        clientId: process.env.OAUTH_CLIENTID,
+        clientSecret: process.env.OAUTH_CLIENT_SECRET,
+        refreshToken: process.env.OAUTH_REFRESH_TOKEN
+      }
+    });
+    
+    const mailOptions = {
+      from: 'theearthdiva@gmail.com',
+      to: 'theearthdiva@gmail.com',
+      subject: 'Store Review Prompt',
+      text: `Write a creative store review essay with at least 9 robust paragraphs about a store called ${storeName} in ${storeCity} visted on ${visitDate}. Include an introduction and conclusion paragraph. The parking was ${difLvlToFind} to find and ${difLvlToUse} to use. There are ${disabledSpaces} disable parking spaces. ${parkingKeywords}. When I went into the dispensary, it had a ${lobbyAesthetic} aesthetic. The size of the lobby was ${lobbySize}. The speed of check-in was ${lobbySpeed}. The atmosphere was ${lobbyAtmos} and the lighting was ${lobbyLighting}. The display cases were ${lobbyDisplays}. ${lobbyKeywords}. The budtender was ${btDesc}. I felt ${btComfort} asking this person about the medical use of their cannabis. They were ${btKnowledge}. If they didn't know the answer to one of my questions, they ${btQuestion}. ${btKeywords}. The packaging was ${cOpkgDesc}. The shop accepted ${coPmt}. ${coKeywords}. When I got home, I started opening the product. The package has to be child-resistant, but it was ${unboxDiff} to open for someone with dexterity problems. The strain was called ${strain} I would rate the color a ${unboxRateClr} on a 5-point scale and the cannabis was ${unboxAppeal}.`
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });    
+
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `Write a creative store review essay with at least 9 robust paragraphs about a store called ${storeName} in ${storeCity} visted on ${visitDate}. Include an introduction and conclusion paragraph. The parking was ${difLvlToFind} to find and ${difLvlToUse} to use. There are ${disabledSpaces} disable parking spaces. ${parkingKeywords}. When I went into the dispensary, it had a ${lobbyAesthetic} aesthetic. The size of the lobby was ${lobbySize}. The speed of check-in was ${lobbySpeed}. The atmosphere was ${lobbyAtmos} and the lighting was ${lobbyLighting}. The display cases were ${lobbyDisplays}. ${lobbyKeywords}. The budtender was ${btDesc}. I felt ${btComfort} asking this person about the medical use of their cannabis. They were ${btKnowledge}. If they didn't know the answer to one of my questions, they ${btQuestion}. ${btKeywords}. The packaging was ${cOpkgDesc}. The shop accepted ${coPmt}. ${coKeywords}. When I got home, I started opening the product. The package has to be child-resistant, but it was ${unboxDiff} to open for someone with dexterity problems. The strain was called ${strain} I would rate the color a ${unboxRateClr} on a 5-point scale and the cannabis was ${unboxAppeal}. Colors that were present on the bud were ${unboxColors}. The smell was ${unboxOdorInt} and had notes of ${unboxOdorNotes}. ${unboxKeywords}. I prepared the cannabis by grinding it and rolling it into a joint. During the grind, I could smell notes of ${prepOdorNotes}. The moisture content was ${prepMoisture}. When it was ready, I took a dry hit. I could taste notes of ${prepTasteNotes}. ${prepKeywords}. Finally I fired up the joint. Overall, the taste was ${finalTasteRate} on a 5-point scale with notes of ${finalTasteNotes}. The joint burned ${finalEven} with a ${finalAshClr} ash. The medicinal effects I felt were ${finalMed}. ${finalKeywords}.`,
       temperature: 0.7, // Higher values means the model will take more risks.
       max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
-      frequency_penalty: 0.7, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+      frequency_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
       presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     });
 
